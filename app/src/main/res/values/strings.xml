@@ -4,6 +4,6 @@
     <string name="enter_item_three">Enter Item two</string>
     <string name="enter_third_item">Enter Item Three</string>
     <string name="submit">Submit</string>
-    <string name="todo">Temporary text</string>
+    <string name="todo">Just text</string>
     <string name="empty_not_saved">Not Saved</string>
 </resources>

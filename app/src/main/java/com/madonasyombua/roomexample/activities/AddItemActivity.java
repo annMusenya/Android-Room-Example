@@ -17,7 +17,6 @@ public class AddItemActivity extends AppCompatActivity {
 
     public static final String EXTRA_REPLAY = "one";
     public static final String EXTRA_REPLAY2 = "two";
-
     public static final String EXTRA_REPLAY3 = "three";
 
 

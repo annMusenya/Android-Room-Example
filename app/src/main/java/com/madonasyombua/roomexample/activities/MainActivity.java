@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            Item item = new Item(data.getStringExtra(AddItemActivity.EXTRA_REPLAY),data.getStringExtra(AddItemActivity.EXTRA_REPLAY2),data.getStringExtra(AddItemActivity.EXTRA_REPLAY3));
+            Item item = new Item(data.getStringExtra(AddItemActivity.EXTRA_REPLAY),
+                    data.getStringExtra(AddItemActivity.EXTRA_REPLAY2),
+                    data.getStringExtra(AddItemActivity.EXTRA_REPLAY3));
             itemViewModel.insert(item);
         } else {
             Toast.makeText(

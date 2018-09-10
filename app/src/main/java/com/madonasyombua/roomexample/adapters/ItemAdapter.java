@@ -37,7 +37,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
 
     }
-
     public void setItemList(List<Item> itemList1){
         itemList = itemList1;
         notifyDataSetChanged();
@@ -60,7 +59,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         TextView displayItemThree;
 
 
-        public ItemViewHolder(View itemView) {
+        ItemViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
         }
