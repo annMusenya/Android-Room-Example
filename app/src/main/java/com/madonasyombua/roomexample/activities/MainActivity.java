@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.widget.Toast;
 
 import com.madonasyombua.roomexample.R;
@@ -41,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
         itemViewModel = ViewModelProviders.of(this).get(ItemViewModel.class);
 
         itemViewModel.getListLiveData().observe(this, itemAdapter::setItemList);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback( 0, ItemTouchHelper.LEFT| ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+
+                //add code
+            }
+        });
 
         floatingActionButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AddItemActivity.class);
