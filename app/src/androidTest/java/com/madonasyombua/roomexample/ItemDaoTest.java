@@ -43,15 +43,7 @@ public class ItemDaoTest {
         assertEquals(allItems.get(0).getItemOne(),item.getItemOne());
 
     }
-    @Test
-    public void deleteAll() throws Exception {
-        Item item = new Item("item1","item 2","item3");
-        itemDao.inset(item);
-        itemDao.deleteAll();
-        List<Item> allItems = LiveDataTest.getValue(itemDao.getItems());
-        assertTrue(allItems.isEmpty());
 
-    }
 
     @Before
     public void dataBaseCreation(){
@@ -67,5 +59,15 @@ public class ItemDaoTest {
     @After
     public void closeTheDatabase() {
         itemDataBase.close();
+    }
+
+    @Test
+    public void deleteAll() throws Exception {
+        Item item = new Item("item1","item 2","item3");
+        itemDao.inset(item);
+        itemDao.deleteAll();
+        List<Item> allItems = LiveDataTest.getValue(itemDao.getItems());
+        assertTrue(allItems.isEmpty());
+
     }
 }
