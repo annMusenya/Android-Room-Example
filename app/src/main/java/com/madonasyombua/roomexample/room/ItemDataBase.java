@@ -39,8 +39,8 @@ public abstract class ItemDataBase  extends RoomDatabase{
         public void onOpen (@NonNull SupportSQLiteDatabase db){
             super.onOpen(db);
             // If you want to keep the data through app restarts,
-            // comment out the following line.
-            new PopulateDbAsync(itemDataBaseInstance).execute();
+            // comment out the following line. for now let's show it
+            //new PopulateDbAsync(itemDataBaseInstance).execute();
         }
     };
 
