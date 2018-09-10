@@ -38,9 +38,9 @@ public class AddItemActivity extends AppCompatActivity {
         //I did this just locally ha!
         itemButton.setOnClickListener(v -> {
             Intent intentReply = new Intent();
-            if (TextUtils.isEmpty(itemOne.getText() ) &&
+            if (TextUtils.isEmpty(itemOne.getText()) ||
                     TextUtils.isEmpty(itemTwo.getText())
-                    && TextUtils.isEmpty(itemThree.getText())) {
+                    || TextUtils.isEmpty(itemThree.getText())) {
                 setResult(RESULT_CANCELED, intentReply);
 
             }else{
