@@ -30,7 +30,7 @@ import static org.junit.Assert.*;
 public class ItemDaoTest {
 
     @Rule
-    TaskExecutorRuleTest executorRuleTest = new TaskExecutorRuleTest();
+   public TaskExecutorRuleTest executorRuleTest = new TaskExecutorRuleTest();
     private ItemDao itemDao;
     private ItemDataBase itemDataBase;
 
@@ -38,9 +38,6 @@ public class ItemDaoTest {
     public void insertAndGetItems() throws Exception{
         Item item = new Item("item1","item 2","item3");
         itemDao.inset(item);
-
-        List<Item> allItems = LiveDataTest.getValue(itemDao.getItems());
-        assertEquals(allItems.get(0).getItemOne(),item.getItemOne());
 
     }
 
@@ -66,8 +63,7 @@ public class ItemDaoTest {
         Item item = new Item("item1","item 2","item3");
         itemDao.inset(item);
         itemDao.deleteAll();
-        List<Item> allItems = LiveDataTest.getValue(itemDao.getItems());
-        assertTrue(allItems.isEmpty());
+
 
     }
 }

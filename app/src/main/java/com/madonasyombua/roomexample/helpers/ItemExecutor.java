@@ -14,7 +14,7 @@ public class ItemExecutor {
     private LiveData<List<Item>> listLiveData;
 
 
-    public ItemExecutor(Application application){
+    ItemExecutor(Application application){
         ItemDataBase itemDataBase = ItemDataBase.getDatabase(application);
         itemDao = itemDataBase.itemDao();
         listLiveData = itemDao.getItems();

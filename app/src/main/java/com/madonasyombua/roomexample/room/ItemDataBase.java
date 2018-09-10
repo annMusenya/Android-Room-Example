@@ -15,7 +15,7 @@ import com.madonasyombua.roomexample.models.Item;
 @Database(entities = {Item.class},version = 1,exportSchema = false)
 public abstract class ItemDataBase  extends RoomDatabase{
 
-    public static final String LOG_TAG = ItemDataBase.class.getSimpleName();
+    private static final String LOG_TAG = ItemDataBase.class.getSimpleName();
     public abstract ItemDao itemDao();
 
     private static ItemDataBase itemDataBaseInstance;
