@@ -35,7 +35,7 @@ public class AddItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_item);
         ButterKnife.bind(this);
 
-        //avoid creating empty rows and columns.
+        //avoid null entry.
         itemButton.setOnClickListener(v -> {
             Intent intentReply = new Intent();
             if (TextUtils.isEmpty(itemOne.getText()) ||
