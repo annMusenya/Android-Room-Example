@@ -62,7 +62,11 @@ public class ItemDaoTest {
     public void deleteAll() throws Exception {
         Item item = new Item("item1","item 2","item3");
         itemDao.inset(item);
+
+        Item item1 = new Item("item1","item2","item3");
+        itemDao.inset(item1);
         itemDao.deleteAll();
+
 
 
     }
