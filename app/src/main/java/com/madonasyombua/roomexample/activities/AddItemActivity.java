@@ -41,7 +41,9 @@ public class AddItemActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(itemOne.getText()) ||
                     TextUtils.isEmpty(itemTwo.getText())
                     || TextUtils.isEmpty(itemThree.getText())) {
-                setResult(RESULT_CANCELED, intentReply);
+                //you can run the below code or return;
+               // setResult(RESULT_CANCELED, intentReply);
+                return;
 
             }else{
                 String item1 = itemOne.getText().toString();
